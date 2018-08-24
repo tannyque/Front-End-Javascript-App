@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CodeClan G7 Cohort App</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <form id="new-person-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="first-name" class="primary">First Name</label>
+        <input type="text" id="first-name" required>
+      </div>
+
+      <div class="form-item">
+        <label for="last-name" class="primary">Last Name</label>
+        <input type="text" id="last-name" required>
+      </div>
+
+      <div class="form-item">
+        <label for="role" class="primary">Role</label>
+        <select id="role" name="">
+          <option value="" disabled selected></option>
+          <option value="Instructor">Instructor</option>
+          <option value="Student">Student</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="favourite-language" class="primary">Favourite Language</label>
+        <select id="favourite-language" name="">
+          <option value="JavaScript">JavaScript</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Swift">Swift</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="save">
+  </form>
+
+  <h1>CodeClan G7 Cohort</h1>
+  <div id="g7-list"></div>
+</body>
+</html>
