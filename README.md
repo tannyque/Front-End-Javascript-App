@@ -34,4 +34,4 @@ When you want to display a new element on the page, you will need to:
 
 1. Access an element that is already in the DOM (`querySelector`)
 2. Create a new element in the JavaScript and populate it with values (`createElement`)
-3. Append the new element you have created in the JavaScript, to the element that is already in the DOM (`appendChild`)
+3. Append the new element you have created in the JavaScript, to the element that is already in the DOM (`appendChild`) 
