@@ -16,12 +16,12 @@
           <label for="firstName" class="primary">First Name</label>
           <input type="text" id="firstName" required>
         </div>
-
+        <br>
         <div class="form-item">
           <label for="lastName" class="primary">Last Name</label>
           <input type="text" id="lastName" required>
         </div>
-
+        <br>
         <div class="form-item">
           <label for="role" class="primary">Role</label>
           <select id="role" name="" required>
@@ -30,7 +30,7 @@
             <option value="Student">Student</option>
           </select>
         </div>
-
+        <br>
         <div class="form-item">
           <label for="language" class="primary">Favourite Language</label>
           <select id="language">
@@ -41,9 +41,15 @@
             <option value="Swift">Swift</option>
           </select>
         </div>
+        <br>
       </div>
-      <input type="submit" value="save">
+      <input type="submit" name="button"value="Save">
     </form>
+    <br>
+    <form id="delete-form">
+      <button type="submit" name="button" id="deleteAll">Delete All</button>
+    </form>
+
 
     <h1>CodeClan G7 Cohort</h1>
     <div id="g7-list"></div>

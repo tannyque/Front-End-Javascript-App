@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-person-form');
   form.addEventListener('submit', handleFormSubmit);
-
+  const deleteForm = document.querySelector('#delete-form')
+  deleteForm.addEventListener('submit', handleDeleteAll);
   renderList();
 });
 
@@ -10,7 +11,7 @@ const getList = function () {
     return JSON.parse(localStorage.getItem('persons'));
   } else {
     return [];
-  }
+  };
 };
 
 const handleFormSubmit = function (event) {
@@ -48,7 +49,14 @@ const buildList = function (person) {
   return personUl;
 };
 
-// Helper function
+const handleDeleteAll = function () {
+  event.preventDefault();
+  const list = document.querySelector('#g7-list');
+  list.innerHTML = "";
+  localStorage.clear()
+}
+
+// Helper functions
 const renderList = function () {
   const g7Div = document.querySelector('#g7-list');
   g7Div.innerHTML = "";
@@ -57,4 +65,4 @@ const renderList = function () {
     personUl = buildList(person);
     g7Div.appendChild(personUl);
   });
-}
+};
