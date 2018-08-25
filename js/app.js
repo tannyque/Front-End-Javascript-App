@@ -52,7 +52,10 @@ const buildList = function (person) {
 const handleDeleteAll = function () {
   event.preventDefault();
   const list = document.querySelector('#g7-list');
-  list.innerHTML = "";
+  // list.innerHTML = "";
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
   localStorage.clear()
 }
 
