@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-person-form');
   form.addEventListener('submit', handleFormSubmit);
-  const deleteForm = document.querySelector('#delete-form')
-  deleteForm.addEventListener('submit', handleDeleteAll);
+  const deleteForm = document.querySelector('#delete')
+  deleteForm.addEventListener('click', handleDeleteAll);
   renderList();
 });
 
