@@ -50,13 +50,14 @@ const buildList = function (person) {
 };
 
 const handleDeleteAll = function () {
-  event.preventDefault();
-  const list = document.querySelector('#g7-list');
+  // event.preventDefault();
+  // const list = document.querySelector('#g7-list');
   // list.innerHTML = "";
-  while (list.firstChild) {
-    list.removeChild(list.firstChild);
-  }
+  // while (list.firstChild) {
+  //   list.removeChild(list.firstChild);
+  // }
   localStorage.clear()
+  renderList();
 }
 
 // Helper functions
