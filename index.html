@@ -1,88 +1,104 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CodeClan G7 Cohort App</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-  <script src="js/app.js"></script>
-</head>
-<body>
-  <div class="main-container">
-    <div class="form-container">
-      <form id="new-person-form", class="new-person-form">
-        <div id="form-wrapper", class="form-wrapper">
-          <div class="form-item">
-            <label for="firstName" class="primary">First Name</label><br>
-            <input type="text" id="firstName" required>
-          </div>
-          <br>
-          <div class="form-item">
-            <label for="lastName" class="primary">Last Name</label><br>
-            <input type="text" id="lastName" required>
-          </div>
-          <br>
-          <div class="form-item">
-            <label for="role" class="primary">Role</label><br>
-            <select id="role" class="dropdown" required>
-              <option value="" disabled selected></option>
-              <option value="Instructor">Instructor</option>
-              <option value="Student">Student</option>
-            </select>
-          </div>
-          <br>
-          <div class="form-item">
-            <label for="language" class="primary">Favourite Language</label><br>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeClan G7 Cohort App</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="public/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+    <script src="js/app.js"></script>
+  </head>
 
-            <!-- <div>
-            <br>
-            <label><input type="radio" name="javascript" id="language">Javascript</label>
-            <label><input type="radio" name="ruby" id="language">Ruby</label>
-            <label><input type="radio" name="java" id="language">Java</label>
-            <label><input type="radio" name="python" id="language">Python</label>
-            <label><input type="radio" name="Swift" id="language">Swift</label>
+  <body>
+    <main>
+      <div class="main-container">
 
-            <input type="radio" id="javascript" checked>
-            <label for="javascript">JavaScript</label>
+        <img src="public/images/codeclan.png" height="200px" width="500px">
 
-            <input type="radio" id="ruby">
-            <label for="ruby">Ruby</label>
-
-            <input type="radio" id="python">
-            <label for="python">Python</label>
-
-            <input type="radio" id="java">
-            <label for="java">Java</label>
-
-            <input type="radio" id="swift">
-            <label for="swift">Swift</label>
-
-          </div> -->
-
-          <select id="language" class="dropdown">
-            <option value="JavaScript">JavaScript</option>
-            <option value="Ruby">Ruby</option>
-            <option value="Python">Python</option>
-            <option value="Java">Java</option>
-            <option value="Swift">Swift</option>
-          </select>
+        <div class="tab">
+          <button class="tablinks" onclick="openForm(event, 'Add')" id="defaultOpen" style="width:50%">Add a new person</button>
+          <button class="tablinks" onclick="openForm(event, 'View')" style="width:50%">CodeClan G7 Cohort</button>
         </div>
-        <br>
+
+        <div id="Add" class="tabcontent"><br>
+          <form id="new-person-form">
+            <div class="box">
+              <div id="form-wrapper">
+                <div class="row">
+                  <div class="col-30">
+                    <label for="firstName" class="primary">First Name: </label>
+                  </div>
+                  <div class="col-70">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-30">
+                    <label for="lastName" class="primary">Last Name: </label>
+                  </div>
+                  <div class="col-70">
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-30">
+                    <label for="role" class="primary">Role: </label>
+                  </div>
+                  <div class="col-70">
+                    <select id="role" required>
+
+                      <option value="" disabled selected>Select Role</option>
+                      <option value="Instructor">Instructor</option>
+                      <option value="Student">Student</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-30">
+                    <label for="language" class="primary">Favourite Language: </label>
+                  </div>
+                  <div class="col-70">
+                    <div class="radio">
+                      <input type="radio" name="language" value="JavaScript" checked> JavaScript
+                      <input type="radio" name="language" value="Ruby"> Ruby
+                      <input type="radio" name="language" value="Python"> Python
+                      <input type="radio" name="language" value="Java"> Java
+                      <input type="radio" name="language" value="C#"> C#
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-30">
+                    <label for="birthday" class="primary">Birthday: </label>
+                  </div>
+                  <div class="col-70">
+                    <input type="date" id="birthday" required>
+
+                  </div>
+                </div>
+
+              </div>
+              <input type="submit" name="button" value="Save"><br><br>
+
+            </div>
+          </form><br>
+        </div>
+
+
+
+        <div id="View" class="tabcontent">
+          <input type="button" id="delete" value="Delete">
+          <div class="">
+            <div id="g7-list"></div>
+          </div>
+        </div>
+
       </div>
-
-      <input type="submit" name="button"value="Save", class="button"><input type="button" id="delete" value="Delete" class="button"> <br>
-    </form>
-    <!-- <form id="delete-form">
-    <button type="submit" name="button" id="deleteAll", class="button">Delete All</button>
-  </form> -->
-</div>
-
-<div class="cohort-list">
-  <h1>CodeClan G7 Cohort</h1>
-  <div id="g7-list"></div>
-</div>
-
-</div>
-</body>
+    </main>
+  </body>
 </html>

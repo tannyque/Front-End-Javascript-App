@@ -1,0 +1,162 @@
+body {
+  font-family: sans-serif;
+  font-size: 85%;
+}
+
+main {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  clear: left;
+}
+
+/* Form */
+
+form {
+  width: 90%;
+  margin: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=text], select {
+  width: 100%;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 12px;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+  /* text-overflow: clip;
+  background: rgba(252, 252, 252, 1);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1); */
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+}
+
+input[type=submit] {
+  background-color: #1d71b8;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-color: #f2f2f2;
+  border-radius: 6px;
+  float: right;
+}
+
+input[type=submit]:hover, input[type=button]:hover {
+  background-color: #2daae1;
+  cursor: pointer;
+}
+
+input[type=button] {
+  background-color: #1d71b8;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-color: #f2f2f2;
+  border-radius: 6px;
+  float: right;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+}
+
+.col-70 {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+  padding: 5px;
+}
+
+/* Tab */
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1.8em;
+  font-family: 'Forum', cursive;
+}
+
+.tab button.active {
+  background-color: #1d71b8;
+  color: #ffffff;
+}
+
+.tab button:hover {
+  color: #2daae1;
+  cursor: pointer;
+}
+
+.tabcontent {
+  display: none;
+  padding: 25px 12px;
+  border: 1px solid #cccccc;
+  border-top: none;
+}
+
+/* Image */
+
+img {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CodeClan G7 Cohort Tab */
+
+#g7-list {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  width: 289px;
+}
