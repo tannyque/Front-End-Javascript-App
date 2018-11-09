@@ -126,6 +126,7 @@ input:focus::-webkit-input-placeholder {
   transition: 0.3s;
   font-size: 1.8em;
   font-family: 'Forum', cursive;
+  width: 50%;
 }
 
 .tab button.active {
