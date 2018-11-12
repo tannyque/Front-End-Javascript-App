@@ -57,6 +57,10 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
+select {
+  font-size: 16px;
+}
+
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
@@ -64,7 +68,7 @@ label {
   margin: auto;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   background-color: #1d71b8;
   color: #ffffff;
   padding: 12px 20px;
@@ -78,15 +82,6 @@ input[type=submit]:hover, input[type=button]:hover {
   cursor: pointer;
 }
 
-input[type=button] {
-  background-color: #1d71b8;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-color: #f2f2f2;
-  border-radius: 6px;
-  float: right;
-}
-
 input:focus::-webkit-input-placeholder {
   color: dodgerblue;
 }
@@ -97,6 +92,13 @@ input:focus::-webkit-input-placeholder {
   padding: 20px;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  padding: 5px;
+}
+
 .col-30 {
   float: left;
   width: 30%;
@@ -105,8 +107,6 @@ input:focus::-webkit-input-placeholder {
 .col-70 {
   float: left;
   width: 70%;
-  margin-top: 6px;
-  padding: 5px;
 }
 
 /* Tab */
