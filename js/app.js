@@ -37,23 +37,35 @@ const handleFormSubmit = function(event) {
 
 const buildList = function(person) {
   const personUl = document.createElement('ul');
-  const firstNameLi = document.createElement('li');
-  firstNameLi.textContent = `First Name: ${person.firstName}`;
-  const lastNameLi = document.createElement('li');
-  lastNameLi.textContent = `Last Name: ${person.lastName}`;
-  const roleLi = document.createElement('li');
-  roleLi.textContent = `Role: ${person.role}`;
-  const languageLi = document.createElement('li');
-  languageLi.textContent = `Favourite Language: ${person.language}`;
-  const dateOfBirthLi = document.createElement('li');
-  const birthdayLi = document.createElement('li');
-  birthdayLi.textContent = `Date of Birth: ${person.birthday}`;
 
-  personUl.appendChild(firstNameLi)
-  personUl.appendChild(lastNameLi)
-  personUl.appendChild(roleLi)
-  personUl.appendChild(languageLi)
-  personUl.appendChild(birthdayLi)
+  const createLi = function(textContent, ul) {
+    const li = document.createElement('li');
+    li.textContent = textContent;
+    personUl.appendChild(li);
+  };
+
+  const firstNameLi = createLi(`First Name: ${person.firstName}`)
+  const lastNameLi = createLi(`Last Name: ${person.lastName}`)
+  const roleLi = createLi(`Role: ${person.role}`)
+  const languageLi = createLi(`Favourite Language: ${person.language}`)
+  const birthdayLi = createLi(`Date of Birth: ${person.birthday}`)
+
+  // const firstNameLi = document.createElement('li');
+  // firstNameLi.textContent = `First Name: ${person.firstName}`;
+  // const lastNameLi = document.createElement('li');
+  // lastNameLi.textContent = `Last Name: ${person.lastName}`;
+  // const roleLi = document.createElement('li');
+  // roleLi.textContent = `Role: ${person.role}`;
+  // const languageLi = document.createElement('li');
+  // languageLi.textContent = `Favourite Language: ${person.language}`;
+  // const birthdayLi = document.createElement('li');
+  // birthdayLi.textContent = `Date of Birth: ${person.birthday}`;
+  //
+  // personUl.appendChild(firstNameLi)
+  // personUl.appendChild(lastNameLi)
+  // personUl.appendChild(roleLi)
+  // personUl.appendChild(languageLi)
+  // personUl.appendChild(birthdayLi)
 
   return personUl;
 };
